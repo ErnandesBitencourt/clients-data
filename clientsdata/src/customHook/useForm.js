@@ -14,4 +14,5 @@ export const useForm= (valores) => {
    
 
     return{ form, onChange, clear}
-}
+};
+
