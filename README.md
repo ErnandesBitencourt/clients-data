@@ -76,8 +76,6 @@ O código busca a utilização de conceitos de Clean Architecture e Clean Code. 
 ![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/59936473-7ac8-47d4-a8a4-55f7121814bd)
  
 
- 
-
 
 ### Desenvolvido por 
 Ernandes Bitencourt

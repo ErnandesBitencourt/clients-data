@@ -1,0 +1,21 @@
+				Questões
+Responda sucintamente os itens a seguir em um .txt levando as perguntas e as
+respostas para o controle de versão da maneira que julgar mais apropriado:
+
+1. A solução deve ser disponibilizada em Cloud ou On-premise?
+R: Sistema Cloud, porque é um sistema em núvem, é o sistemas que roda em um servidor na internet e basta ter um computador ou celular/tablet conectado na internet para acessá-lo através de um navegador de internet ou aplicativo móvel. 
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa
+solução, responda qual ferramenta acreditas ser apropriada para o controle de tarefas da equipe, a ferramenta é ágil ?
+
+R: Ô Scrum , por que é baseado em trabalho de equipe, colaboração e comunicação,
+como o Sprints,Backlog do produto,incremento do produto etc, com o objetivo de inspecionar de perto os projetos e descobrir quaisquer problemas ou questões para que eles possam ser rapidamente abordados.
+
+3. Você se sente capaz de liderar esta equipe? Por quê?
+R: No momento me falta um pouco de experiencia, então não seria um bom lider .
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
+R: Bom no projeto poderiamos implementar, colocando os botões para atualizar, excluir e exibir dados do usuario.
+
+5. Acha válido esse desafio para o processo que está participando?
+R: Sim.
