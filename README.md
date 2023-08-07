@@ -38,9 +38,13 @@ O código busca a utilização de conceitos de Clean Architecture e Clean Code. 
 
 ![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/03158c01-782d-4d96-bf85-63e8d4f8d9b7)
 
+### Diagrama de flux.
 
+ [Link do diagrama feito no https://app.diagrams.net/ ](https://drive.google.com/file/d/1F-JI69Ti0C0vKWSawJFMegyxZN5Xnopc/view?usp=sharing)
 
-### Documentação da API 
+![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/59936473-7ac8-47d4-a8a4-55f7121814bd)
+ 
+### Documentação da API .
 
 - buscar Cep do usuario, utilizando API  [Via Cep](https://viacep.com.br/)
 
