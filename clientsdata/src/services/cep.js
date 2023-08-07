@@ -17,33 +17,3 @@ export const Cep = (cep) => {
 //       "ddd": "11",
 //       "siafi": "7107"
 //     }
-bairro
-: 
-"Cidade de Deus"
-cep
-: 
-"69099-782"
-complemento
-: 
-""
-ddd
-: 
-"92"
-gia
-: 
-""
-ibge
-: 
-"1302603"
-localidade
-: 
-"Manaus"
-logradouro
-: 
-"Rua Salmom"
-siafi
-: 
-"0255"
-uf
-: 
-"AM"
