@@ -9,7 +9,7 @@ O código busca a utilização de conceitos de Clean Architecture e Clean Code. 
 
 
 ### Link do projeto
-* [Link do projeto clients-data](https://vercel.com/](https://clients-data-5jtn.vercel.app/))
+* [Link do projeto clients-data](https://clients-data-5jtn.vercel.app/)
 
 ### Funcionalidades 
 
