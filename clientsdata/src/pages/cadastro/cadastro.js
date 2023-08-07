@@ -1,74 +1,53 @@
-import React, { useEffect, useState } from "react";
-import { Inputs } from "../../components/inputs/inpurts";
+import React, { useContext} from "react";
+import { Inputs } from "../../components/inputs/inputs";
 import { useNavigate } from "react-router-dom";
-import { retornaUmaPage } from "../../routes/coordenadorDeRotas";
-import { useForm } from "../../customHook/useForm";
-import axios from "axios";
-import { Cep } from "../../services/cep";
-import  {v4 as uuid} from "uuid"
+import { login} from "../../routes/coordenadorDeRotas";
+import { GlobalContext } from "../../global";
+import { Container, Main,H1,Form,Button,DivText,Strong } from "./styledCadastro";
 
-
-
-export const Cadastro = () => {
-
+export const Cadastro = () => {  
  const navigate = useNavigate();
- const[bairro, setBairro] = useState("");
- const [logradouro, setLogradouro] = useState("");
- const [localidade,setLocalidade] = useState("");
- const [uf, setUf] = useState("");
- const [infClientes, setInfClientes] = useState([])
 
- const {form , onChange,clear} = useForm({ id:"",nome:"",date:"",email:"",cpf:"",cep:"",rua:logradouro,bairro:bairro,numerocasa:"",estado:uf,municipio:localidade,complemento:""});
-
- async function buscarCep (e)  {
-  e.preventDefault();
-  try {
-
-    if (form.cep.length === 8) {
-   
-    const response = await axios.get(Cep (form.cep));
-      const dadosCep = response.data;
-      setBairro(dadosCep.bairro);
-      setLogradouro(dadosCep.logradouro);
-      setLocalidade(dadosCep.localidade);
-      setUf(dadosCep.uf)
-    }else{
-      alert("Deve conter somente 8 numeros")
-    }
-  } catch (error) {
-    
-    console.error(console.log("Cep não encontrado ou não existe"));
-  }
-}
-
-
+  const cadastro = useContext(GlobalContext);
     return (
-        <div>
-            <h1>Criar Cadastro</h1>
+        <Container>
+            <Main>
+                 <H1>Registre-se</H1>
 
-            <form onSubmit={buscarCep}>
-                <Inputs name={"nome"}onChange={onChange} value={form.nome} type={"text"} placeholder={"Nome Completo"} label = {"nome"} />
-                <Inputs name={"date"} onChange={onChange} value={form.date} type={"date"} placeholder={"data de nascimento"} label={"Data de nascimento"} />
-                <Inputs name={"email"} onChange={onChange} value={form.email} type={"email"} placeholder={"E-mail"} label={"E-mail"} />
-                <Inputs name={"cpf"}onChange={onChange} value={form.cpf} type={"number"} placeholder={"CPF"} label={"CPF"} />
-                <Inputs name={"cep"} onChange={onChange}  value={form.cep}  type={"number"} placeholder={"CEP"} label={"Buscar endereço por cep"}/>
+              <Form  onSubmit={cadastro.buttonCriarCadastro} >
+                  <Inputs name={"nome"}onChange={cadastro.onChanges} value={cadastro.nome} type={"text"} placeholder={"Nome completo"}  />
 
-                <button onClick={() => buscarCep}>Buscar Cep</button>
-                <Inputs name={"rua"}onChange={onChange} value={logradouro} type={"text"} placeholder={"Rua"} label={"Nome da Rua"} />
+                  <Inputs name={"email"} onChange={cadastro.onChanges} value={cadastro.email} type={"email"} placeholder={"E-mail"}  />
+                  <Inputs name={"emailConf"} onChange={cadastro.onChanges} value={cadastro.emailConf} type={"email"} placeholder={"Confirma e-mail"}  />
 
-                <Inputs name={"numerocasa"}onChange={onChange} value={form.numerocasa} type={"number"} placeholder={"N°"} label={"Numero da casa"} />
+                  <Inputs name={"senha"} onChange={cadastro.onChanges} value={cadastro.senha} type={"text"} placeholder={"Senha"} />
+                  <Inputs name={"senhaConf"} onChange={cadastro.onChanges} value={cadastro.senhaConf} type={"text"} placeholder={"Confirmar senha"} />
 
-                <Inputs name={"bairro"}onChange={onChange} value={bairro} type={"text"} placeholder={"Bairro"} label={"Bairro"} />
+                  <Inputs name={"cpf"}onChange={cadastro.onChanges} value={cadastro.cpf} type={"number"} placeholder={"CPF"} label={"CPF"} />
 
-                <Inputs name={"complemento"}onChange={onChange} value={form.complemento} type={"text"} placeholder={"complemento"} label={"Complemento"} />
+                  <Inputs name={"cep"} onChange={cadastro.onChanges} onBlur={cadastro.buscarCep} value={cadastro.cep}  type={"number"} placeholder={"CEP"} label={"Buscar endereço por cep"}/>
+                  
+                  <Inputs name={"rua"} onChange={cadastro.onChanges} value={cadastro.logradouroCep} type={"text"} placeholder={"Rua"} label={"Nome da Rua"} />
 
-                <Inputs name={"estado"}onChange={onChange} value={uf} type={"text"} placeholder={"Estado"} label={"Estado"} />
-                <Inputs name={"municipio"}onChange={onChange} value={localidade} type={"text"} placeholder={"município"} label={"município"} />
-            </form>
-            <div>
-                <button onClick={()=>retornaUmaPage(navigate) } >Voltar</button>
-                <button> Criar Cadastro</button>
-            </div>
-        </div>
+                  <Inputs name={"numerocasa"}onChange={cadastro.onChanges} value={cadastro.numerocasa} type={"number"} placeholder={"N° da casa"}  />
+
+                  <Inputs name={"bairro"}onChange={cadastro.onChanges} value={cadastro.bairroCep} type={"text"} placeholder={"Bairro"}  />
+
+                  <Inputs name={"complemento"}onChange={cadastro.onChanges} value={cadastro.complemento} type={"text"} placeholder={"Complemento"}  />
+
+                  <Inputs name={"estado"}onChange={cadastro.onChanges} value={cadastro.estadoCep} type={"text"} placeholder={"Estado"}  />
+
+                  <Inputs name={"municipio"}onChange={cadastro.onChanges} value={cadastro.localidadeCep} type={"text"} placeholder={"Município"}  />
+
+                 
+                  <Button onClick={cadastro.buttonCriarCadastro} > Registre-se</Button> 
+               
+              </Form>
+                <DivText>
+                  <p>Já tem uma conta?</p> <Strong onClick={() => login(navigate)}> &nbsp;Entre</Strong>      
+                </DivText>
+            </Main>
+         
+        </Container>
     )
 }
