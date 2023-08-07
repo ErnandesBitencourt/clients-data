@@ -75,7 +75,7 @@ export const Router = () => {
     const Private = ({Item}) => {
       const { signed } = useAut();
 
-     return signed > 0 ? Item : <Login/>;
+     return signed > 0 ? Item : <Home/>;
     }
 
 
