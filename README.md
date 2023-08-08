@@ -27,6 +27,8 @@ O código busca a utilização de conceitos de Clean Architecture e Clean Code. 
 - react-router-dom
 - styled-components
 - Deploy feito na  [vercel.com](https://vercel.com/)
+- [Material UI](https://mui.com/material-ui/getting-started/usage/)
+
 
 ### Framework e bibliotecas 
 

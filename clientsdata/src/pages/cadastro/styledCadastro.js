@@ -14,8 +14,8 @@ export const Container =  styled.div`
 export const Main = styled.main`
     width: 100%;
     max-width: 400px;
-    max-width: 320;
-    height: 85%;
+    max-width: 320px;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -71,4 +71,37 @@ export const Strong = styled.strong`
     border-bottom: solid 1px ${props => props.theme.Themers.colorText};
     font-weight: 800;
  
+`;
+
+export const DivInput = styled.div`
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+
+`;
+export const DivInput2 = styled.div`
+display: flex;
+width: 100%;
+height: auto;
+justify-content: center;
+align-items: center;
+`;
+
+export const ButtonCep = styled.div`
+  padding: 16px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: ${props => props.theme.Themers.corButton};
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  max-width: 110px;
+  min-width: 100px;
 `;

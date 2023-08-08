@@ -20,6 +20,7 @@ export const Router = () => {
     const [uf, setUf] = useState("");
     const [forms, onChanges, clears] = useForms({id:"",nome:"",email:"",emailConf:"", senha:"", senhaConf:"",cpf:"",cep:"",rua:logradouro,bairro:bairro,numerocasa:"",estado:uf,municipio:localidade,complemento:""});
     const {signup} = useAut();
+   
  
   //Buscar cer Viacep//
   const Clea = () => {
@@ -48,30 +49,35 @@ export const Router = () => {
       }
     } catch (error) {
       
-      console.error(console.log("Cep não encontrado ou não existe"));
+      console.error(alert("Cep não encontrado ou não existe"));
     }
   }
+
     //Criar cadastro // 
     const buttonCriarCadastro = (e) => {
       
       e.preventDefault()
       if(forms.email !== forms.emailConf ){
-          alert("E-mail está diferente do outro, profavor coloque o mesmo e-amil")
+          alert("E-mail está diferente do outro, por favor coloque o mesmo e-amil")
+          
       };
       if(forms.senha !== forms.senhaConf ){
-        alert("Senha está diferente do outra, profavor coloque a mesma senha")
-    };
+        
+        alert("Senha está diferente do outra, por favor coloque a mesma senha")
+      
+      };
+
       const res = signup(forms.email,forms.senha );
       if(res) {
         alert(res);
-    }
-
-      setInfClients([...infClients,{id:forms.id=uuidv4(),nome:forms.nome, email:forms.email,senha:forms.senha, cpf:forms.cpf,cep:forms.cep, rua:forms.rua=logradouro, bairro:forms.bairro=bairro, numerocasa:forms.numerocasa, estado:forms.estado=uf,municipio:forms.municipio=localidade,complemento:forms.complemento }]);
-      clears();
-      Clea();
-      
+       
+      }
+        setInfClients([...infClients,{id:forms.id=uuidv4(),nome:forms.nome,email:forms.email,senha:forms.senha, cpf:forms.cpf,cep:forms.cep, rua:forms.rua=logradouro, bairro:forms.bairro=bairro, numerocasa:forms.numerocasa, estado:forms.estado=uf,municipio:forms.municipio=localidade,complemento:forms.complemento }]);
+        clears();
+        Clea();
   };
 
+  
     const Private = ({Item}) => {
       const { signed } = useAut();
 
