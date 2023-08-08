@@ -18,31 +18,29 @@ O código busca a utilização de conceitos de Clean Architecture e Clean Code. 
 - Login
 - sair
 
+### Biblioteca
+- [Reactjs](https://pt-br.legacy.reactjs.org/)
+- [axios](https://axios-http.com/ptbr/docs/intro)
+- [react-router-dom](https://reactrouter.com/en/main) - (BrowserRouter, Route, Routes,useNavigate)
+- [Custom hooks](https://legacy.reactjs.org/docs/hooks-custom.html) - (useForms)
+- [Hooks](https://legacy.reactjs.org/docs/hooks-intro.html) - (createContext, useEffect, useState )
+- [styled-components](https://styled-components.com/)
+- [Material UI](https://mui.com/material-ui/getting-started/usage/)
 
 ### Tecnologias Utilizadas:
 
-- Node.Js
-- Javascript
-- axios
-- react-router-dom
-- styled-components
+- [Node.Js](https://nodejs.org/en)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - Deploy feito na  [vercel.com](https://vercel.com/)
-- [Material UI](https://mui.com/material-ui/getting-started/usage/)
 
 
-### Framework e bibliotecas 
-
--Reactjs
-
- 
 ### Login 
-
 
 ![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/03158c01-782d-4d96-bf85-63e8d4f8d9b7)
  
 ### Documentação da API .
 
-- buscar Cep do usuario, utilizando API  [Via Cep](https://viacep.com.br/)
+* Buscar Cep do usuario, utilizando API  [Via Cep](https://viacep.com.br/)
 
 
 ![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/cf4189d7-d985-4ea0-b8fa-c7d6abc26364)
@@ -51,17 +49,16 @@ O código busca a utilização de conceitos de Clean Architecture e Clean Code. 
 ![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/cdb0a4e1-2257-4d39-bb76-8d1940f83557)
 
 
-* Tela de criar cadastro
+### Tela de criar cadastro
 
 ![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/e78ac0bf-2b12-44b7-9a7a-617b9d6b57e7)
 
 
--Criar cadastro.
+### Criar cadastro.
+
 * Codigo utilizado.
 
   ![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/84131db5-813d-4d94-8033-f1536a29633a)
-
-
 
 
 - Tela do home page depois de ter logado
