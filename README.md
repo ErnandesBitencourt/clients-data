@@ -18,17 +18,15 @@ O código busca a utilização de conceitos de Clean Architecture e Clean Code. 
 - Login
 - sair
 
-### Biblioteca
-- [Reactjs](https://pt-br.legacy.reactjs.org/)
+###  Tecnologias, bibliotecas e framework utilizadas :
+
 - [axios](https://axios-http.com/ptbr/docs/intro)
 - [react-router-dom](https://reactrouter.com/en/main) - (BrowserRouter, Route, Routes,useNavigate)
 - [Custom hooks](https://legacy.reactjs.org/docs/hooks-custom.html) - (useForms)
 - [Hooks](https://legacy.reactjs.org/docs/hooks-intro.html) - (createContext, useEffect, useState )
 - [styled-components](https://styled-components.com/)
 - [Material UI](https://mui.com/material-ui/getting-started/usage/)
-
-### Tecnologias Utilizadas:
-
+- [Reactjs](https://pt-br.legacy.reactjs.org/)
 - [Node.Js](https://nodejs.org/en)
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - Deploy feito na  [vercel.com](https://vercel.com/)
