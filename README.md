@@ -56,7 +56,8 @@ O código busca a utilização de conceitos de Clean Architecture e Clean Code. 
 
 * Codigo utilizado.
 
-  ![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/84131db5-813d-4d94-8033-f1536a29633a)
+ ![image](https://github.com/ErnandesBitencourt/clients-data/assets/80565676/79453bd7-ff6e-4ff4-b010-efb2b338f3c7)
+
 
 
 - Tela do home page depois de ter logado
